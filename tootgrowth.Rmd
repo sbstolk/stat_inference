@@ -20,3 +20,29 @@ ggplot(data=ToothGrowth, aes(x=as.factor(dose), y=len, fill=supp)) +
   ylab("Tooth length")
   guides(fill=guide_legend(title="Tooth Growth by Supplement Type"))
 ```
+The plot shows a strong positive correlation between increased Vitamin C dosage and increased tooth growth. However, it is less obvious if there is an effect from delivery method. 
+This can be examined by running independent linear models of the relationship between each variable and tooth length.
+
+```{r}
+fit <- lm(len ~ supp, data=ToothGrowth)
+summary(fit)
+```
+From these results, we can see that the suppliment type explains 5.95% of the variation in tooth growth. 
+
+```{r}
+fit2 <-lm(len~dose,data=ToothGrowth)
+ summary(fit2)
+ ```
+ This shows that 64.4% of variation in tooth growth is attributible to the doseage of Vitamin C. 
+ The process is repeated to check for a combined effect of dose and suppliment type. 
+```{r} 
+toothfit <- lm(len~dose+supp, data = ToothGrowth)
+summary(toothfit)
+```
+In total, 70.4% of variation in guinea pig tooth growth in this experiment can be attributed to a combination of the Vitamin C dosage and delivery method. 
+To check the significance of these results
+
+```{r}
+confint(toothfit)
+```
+The result shows that the null hypothesis (ie, that Vitamin C dosage and delivery has no effect on guniea pig tooth growth) can be rejected in this instance. 
