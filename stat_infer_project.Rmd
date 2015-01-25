@@ -1,0 +1,9 @@
+**Statistical Inference Course Project**
+#
+*sbstolk*
+#
+**Overview**
+#
+**Simulation**
+#
+**Results**
