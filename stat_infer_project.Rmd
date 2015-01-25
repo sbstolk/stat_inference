@@ -37,5 +37,11 @@ The variance of the simulations was calculated.
 #[1] 0.6498142
 ```
 The result is within 4% of the expected variance, from which it can be said that the theoretical estimate is correct. 
-
-
+#
+The distribution is predicted to be normal. This can be assessed visually by comparing a plot of theoretical outcomes with simulation outcomes. 
+```{r}
+expScale <- scale(expdist)
+hist(expScale,probability=T, main="", ylim=c(0, 0.5))
+lines(density(expScale))
+curve(dnorm(x,0,1), -3, 3, col="green", add=T)
+```
