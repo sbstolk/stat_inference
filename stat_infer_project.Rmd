@@ -10,4 +10,13 @@ The distribution of averages of 40 expotentials are examined via 1000 simulatied
 #
 **Simulation**
 #
+The theoretical mean of this distribution is calculated as 1/lambda. For lambda = 0.2, the theoretical mean is 5. 
+This will be compared to the outcome of the simulation. The simulations were created using a function as follows.
+```{r}
+expdist <- rep(NA,1000)
+for (i in 1:1000){
+     expdist[i] <- mean(rexp(40,0.2))
+}
+```
+
 **Results**
