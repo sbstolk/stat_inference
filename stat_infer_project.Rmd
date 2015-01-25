@@ -1,8 +1,12 @@
 **Statistical Inference Course Project**
 #
-*sbstolk*
+*author: sbstolk (January 24 2015)*
 #
 **Overview**
+#
+The goal of this simulation is to compare the sampling of expotential distributions simulated in R with the results predicted by the Central Limit Theorem. 
+An exponential distribution is simulated in R using the code rexp(n, lambda) where lambda is the rate parameter. For this simuation, lambda is set equal to 0.2.
+The distribution of averages of 40 expotentials are examined via 1000 simulatied distributions. 
 #
 **Simulation**
 #
