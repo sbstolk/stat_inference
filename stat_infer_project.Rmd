@@ -28,4 +28,14 @@ The mean of the simulations was calculated.
 ```
 This is only 0.0088 larger (1.8% larger) than the calculated theoretical mean of 5.
 It can be said that the difference is statistically negligible and that the theoretical calculation is correct. 
+#
+The theoretical variance is ((1/lambda)^2)/n, which is ((1/0.2)^2)/40 for the simulation model. The expected theoretical variance is 0.625
+The variance of the simulations was calculated. 
+```{r}
+> expVar <-var(expdist)
+> expVar
+#[1] 0.6498142
+```
+The result is within 4% of the expected variance, from which it can be said that the theoretical estimate is correct. 
+
 
