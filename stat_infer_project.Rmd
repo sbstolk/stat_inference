@@ -20,3 +20,12 @@ for (i in 1:1000){
 ```
 
 **Results**
+The mean of the simulations was calculated. 
+```{r}
+> expMean <-mean(expdist)
+> expMean
+#[1] 5.008841
+```
+This is only 0.0088 larger (1.8% larger) than the calculated theoretical mean of 5.
+It can be said that the difference is statistically negligible and that the theoretical calculation is correct. 
+
